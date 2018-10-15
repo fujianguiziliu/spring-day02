@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--开启组件的扫描  采用Ioc注解-->
+	<context:component-scan base-package="com._520it._02_autowire"/>
+	<!-- 使用xml注解 -->
+	<!-- <bean id="employee" class="com._520it._02_autowire.Employee">
+		<property name="dept" ref="department"></property>
+	加了@Autowired，可以不用下面的代码 
+		<property name="dept" ref="department"></property>
+	</bean>
+	<bean id="department" class="com._520it._02_autowire.Department"></bean> -->
+	<!-- <bean id="department1" class="com._520it._02_autowire.Department"></bean> -->
+	<!-- <bean id="Department" class="com._520it._02_autowire.Department2"></bean> -->
+</beans>

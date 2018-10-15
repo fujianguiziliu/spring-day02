@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xmlns:p="http://www.springframework.org/schema/p" -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--静态代理对象注重最终结果  -->
+	<bean id="userServiceProxy"
+	class="com._520it._06_static_proxy.UserServiceImplByStaticproxy">
+		<property name="target" ref="userService"></property>
+	</bean>
+	<!-- 当前bean实例锁所私有的 -->
+	<bean id="userService" class="com._520it._06_static_proxy.UserServiceImpl"></bean>
+	
+</beans>    

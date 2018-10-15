@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="baseDAO" abstract="true">
+		<property name="datasource" value="假的连接对象"></property>
+	</bean>
+	<!--配置javabean对象  -->
+	<bean name="userDAO" class="com._520it._01_extends.UserDAOImpl"
+	parent="baseDAO">
+		<!-- <property name="datasource" value="假的连接对象"></property> -->
+	</bean>
+	<bean name="studentDAO" class="com._520it._01_extends.StudentDAOImpl"
+	parent="baseDAO">
+		
+	</bean>
+</beans>
